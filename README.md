@@ -11,7 +11,7 @@ und/oder üblichen Inhalt eines CSAF-Advisorys beim CERTVDE beinhaltet.
 
 ## Wording / Glossar
 
-Es werden die Begriffe nach [rfc2119](https://datatracker.ietf.org/doc/html/rfc2119) verwendet, insebsondere:
+Es werden die Begriffe nach [rfc2119](https://datatracker.ietf.org/doc/html/rfc2119) verwendet, insbesondere:
 - **MUST**: Dieser Abschnitt muss ausgefüllt oder bearbeitet werden
 - **SHOULD**: Dieser Abschnitt sollte ausgefüllt/bearbeitet werden. Wird er ausgelassen muss dies begründbar sein.
 - **MAY**: Der Abschnitt ist Optional.
