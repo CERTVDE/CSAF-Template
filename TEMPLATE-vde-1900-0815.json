@@ -1,0 +1,429 @@
+{
+  "document": {
+    "acknowledgments": [
+      {
+        "organization": "CERT@VDE",
+        "summary": "coordination",
+        "urls": [
+          "https://certvde.com"
+        ]
+      },
+      {
+        "names": [
+          "[TODO][MAY] Chucky"
+        ],
+        "organization": "[TODO][MAY] Security Nightmares Inc.",
+        "summary": "reporting",
+        "urls": [
+          "https://www.example.com"
+        ]
+      }
+    ],
+    "aggregate_severity": {
+      "namespace": "https://vendor.tld",
+      "text": "[TODO][MAY] critical/high..."
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en-GB",
+    "notes": [
+      {
+        "audience": "csaf creator",
+        "category": "other",
+        "text": "[CERT@VDE CSAF Template](https://github.com/CERTVDE/CSAF-Template) © 2024 by [CERT@VDE](https://certvde.com) is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1) \n\nThis document note may only be removed in order to create a CSAF advisory based on this template.",
+        "title": "LICENSE"
+      },
+      {
+        "category": "summary",
+        "text": "[TODO][MUST]\nSummary content",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "[TODO][SHOULD]\nImpact content",
+        "title": "Impact"
+      },
+      {
+        "category": "description",
+        "text": "[TODO][SHOULD]\nMitigation content",
+        "title": "Mitigation"
+      },
+      {
+        "category": "description",
+        "text": "[TODO][SHOULD]\nRemediation content",
+        "title": "Remediation"
+      },
+      {
+        "category": "general",
+        "text": "[TODO][MAY]\nGeneral recomendation",
+        "title": "General Recommendation"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "[TODO][MAY]",
+        "title": "Disclaimer"
+      },
+      {
+        "category": "description",
+        "text": "[TODO][MAY] What kind of product ",
+        "title": "Product Description"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "[TODO]psirt@vendor.tld",
+      "issuing_authority": "[TODO]",
+      "name": "[TODO]Vendor GmbH/AG/SE & Co KG",
+      "namespace": "https://vendor.tld.TODO.MUST"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "[TODO][SHOULD]\n$VENDORPSIRTDESCRIPTION$",
+        "url": "https://$VENDORPSIRTURL$.TODO.SHOULD"
+      },
+      {
+        "category": "external",
+        "summary": "CERT@VDE Security Advisories for [TODO][VENDOR][MUST]",
+        "url": "https://certvde.com/en/advisories/vendor/$VENDORSLUG$/TODO.MUST"
+      },
+      {
+        "category": "self",
+        "summary": "[TODO][MUST]$$/document/tracking/aliases/0$$: $$/document/title$$ - HTML",
+        "url": "https://certvde.com/en/advisories/$$/document/tracking/aliases/0$$/TODO.MUST"
+      },
+      {
+        "summary": "[TODO][MUST]$$/document/tracking/aliases/0$$: $$/document/title$$ - CSAF",
+        "url": "https://$VENDORSLUG$.csaf-tp.certvde.com/.well-known/csaf/white/$YEAR$/$$/document/tracking/aliases/0$$.json/TODO.MUST",
+        "category": "self"
+      }
+    ],
+    "title": "[TODO][MUST][VENDOR-CHOICE] Title (description)",
+    "tracking": {
+      "aliases": [
+        "[TODO][MUST]VDE-1900-0815"
+      ],
+      "current_release_date": "2024-05-27T10:00:00.000Z",
+      "generator": {
+        "date": "2024-10-24T13:03:24.888Z",
+        "engine": {
+          "name": "Secvisogram",
+          "version": "2.5.12"
+        }
+      },
+      "id": "[TODO][MUST]VDE-1900-0815",
+      "initial_release_date": "2024-05-27T10:00:00.000Z",
+      "revision_history": [
+        {
+          "date": "2024-05-27T10:00:00.000Z",
+          "number": "1",
+          "summary": "Initial revision."
+        }
+      ],
+      "status": "draft",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "branches": [
+                      {
+                        "category": "product_version",
+                        "name": "HW rev a",
+                        "product": {
+                          "name": "PRODUCT_NAME_01 HW rev a",
+                          "product_id": "CSAFPID-11001",
+                          "product_identification_helper": {
+                            "model_numbers": [
+                              "123-456",
+                              "234-567"
+                            ]
+                          }
+                        }
+                      }
+                    ],
+                    "category": "product_name",
+                    "name": "PRODUCT_NAME_01"
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "PRODUCT_NAME_02",
+                    "product": {
+                      "name": "PRODUCT_NAME_02",
+                      "product_id": "CSAFPID-11002"
+                    }
+                  }
+                ],
+                "category": "product_family",
+                "name": "PRODUCT_FAMILY01"
+              }
+            ],
+            "category": "product_family",
+            "name": "Hardware"
+          },
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "8.4.2",
+                    "product": {
+                      "name": "Firmware PRODUCT_FAMILY01 8.4.2",
+                      "product_id": "CSAFPID-22001"
+                    }
+                  },
+                  {
+                    "category": "product_version_range",
+                    "name": "< 8.4.2",
+                    "product": {
+                      "name": "Firmware PRODUCT_FAMILY01 < 8.4.2",
+                      "product_id": "CSAFPID-21001"
+                    }
+                  }
+                ],
+                "category": "product_family",
+                "name": "PRODUCT_FAMILY01"
+              }
+            ],
+            "category": "product_family",
+            "name": "Firmware"
+          },
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "8.4.2",
+                    "product": {
+                      "name": "Software Engineering SDK 8.4.2",
+                      "product_id": "CSAFPID-52001"
+                    }
+                  },
+                  {
+                    "category": "product_version_range",
+                    "name": "< 8.4.2",
+                    "product": {
+                      "name": "Software Engineering SDK < 8.4.2",
+                      "product_id": "CSAFPID-51001"
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Engineering SDK"
+              }
+            ],
+            "category": "product_family",
+            "name": "Software"
+          }
+        ],
+        "category": "vendor",
+        "name": "VENDOR_NAME"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Windows",
+            "product": {
+              "name": "Microsoft Windows",
+              "product_id": "CSAFPID-90001"
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Microsoft"
+      }
+    ],
+    "product_groups": [
+      {
+        "group_id": "CSAFGID-0001",
+        "product_ids": [
+          "CSAFPID-31001",
+          "CSAFPID-31002",
+          "CSAFPID-31003"
+        ],
+        "summary": "Affected products."
+      },
+      {
+        "group_id": "CSAFGID-0002",
+        "product_ids": [
+          "CSAFPID-32001",
+          "CSAFPID-32002",
+          "CSAFPID-32003"
+        ],
+        "summary": "Fixed products."
+      }
+    ],
+    "relationships": [
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "FW < 8.4.2 installed on PRODUCT_NAME_01 HW rev a",
+          "product_id": "CSAFPID-31001"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11001"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "FW < 8.4.2 installed on PRODUCT_NAME_02",
+          "product_id": "CSAFPID-31002"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11002"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "FW 8.4.2 installed on PRODUCT_NAME_01 HW rev a",
+          "product_id": "CSAFPID-32001"
+        },
+        "product_reference": "CSAFPID-22001",
+        "relates_to_product_reference": "CSAFPID-11001"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "FW 8.4.2 installed on PRODUCT_NAME_02",
+          "product_id": "CSAFPID-32002"
+        },
+        "product_reference": "CSAFPID-22001",
+        "relates_to_product_reference": "CSAFPID-11002"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Software Engineering SDK < 8.4.2 installed on Microsoft Windows",
+          "product_id": "CSAFPID-31003"
+        },
+        "product_reference": "CSAFPID-51001",
+        "relates_to_product_reference": "CSAFPID-90001"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Software Engineering SDK 8.4.2 installed on Microsoft Windows",
+          "product_id": "CSAFPID-32003"
+        },
+        "product_reference": "CSAFPID-52001",
+        "relates_to_product_reference": "CSAFPID-90001"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-1900-0815",
+      "notes": [
+        {
+          "audience": "all",
+          "category": "description",
+          "text": "[TODO][MUST]] \nShort vulnerability description like in the CVE",
+          "title": "Vulnerability Description"
+        },
+        {
+          "audience": "operational management and system administrators",
+          "category": "details",
+          "text": "[TODO][MAY] \nHow does the CVE affect the products of this advisory?",
+          "title": "Vulnerability characterisation"
+        },
+        {
+          "category": "details",
+          "text": "[TODO][MAY]e.g. No network interface so AV is local.",
+          "title": "Details for PRODUCT 01 HW rev a"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "CSAFPID-32001",
+          "CSAFPID-32002",
+          "CSAFPID-32003"
+        ],
+        "known_affected": [
+          "CSAFPID-31001",
+          "CSAFPID-31002",
+          "CSAFPID-31003"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "[TODO][MUST]usually the same as /document_notes/mitigation",
+          "entitlements": [
+            "[TODO][MAY][if applicable]\nConditions that must be fulfilled in order to receive the patch or implement the mitigation action.\n\nExample:\n\nAn active support contract is required."
+          ],
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "confidentialityImpact": "HIGH",
+            "environmentalScore": 9.8,
+            "environmentalSeverity": "CRITICAL",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "temporalScore": 9.8,
+            "temporalSeverity": "CRITICAL",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-31001",
+            "CSAFPID-31002",
+            "CSAFPID-31003"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 0,
+            "baseSeverity": "NONE",
+            "confidentialityImpact": "NONE",
+            "environmentalScore": 0,
+            "environmentalSeverity": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "temporalScore": 0,
+            "temporalSeverity": "NONE",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-32001",
+            "CSAFPID-32002",
+            "CSAFPID-32003"
+          ]
+        }
+      ],
+      "title": "CVE-1900-0815"
+    }
+  ]
+}
