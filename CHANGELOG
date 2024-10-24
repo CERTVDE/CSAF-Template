@@ -1,0 +1,28 @@
+Release 1.2.1 
+  added license as document note
+
+Release 1.2.0
+  added cacnonical self referenece (CSAF)
+  introduced variables - limited to references in a first step
+
+
+Release 1.1.2
+  removed last appearance of cert.vde.com, replaced by certvde.com
+
+Release 1.1.1
+  updated Release notes
+
+Release 1.1.0
+  Simplified Wording of required and optional fields by using rfc2119
+
+Release 1.0.0
+  minor wording changes: [optional] and optional to [OPTIONAL]
+
+Release 0.5.1
+  Revamp branches and Vulnerability Remediations
+  clarified Vendor naming (Publisher)
+  Reference 2 specify link to advisories for vendor
+  Removed vendor name from sub product families
+  changed language to en-GB
+
+CERT@VDE CSAF Template © 2024 by CERT@VDE is licensed under CC BY-NC 4.0. To view a copy of this license, visit https://creativecommons.org/licenses/by-nc/4.0/
