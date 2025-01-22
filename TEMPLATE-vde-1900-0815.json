@@ -98,9 +98,9 @@
         "url": "https://certvde.com/en/advisories/$$/document/tracking/aliases/0$$/TODO.MUST"
       },
       {
+        "category": "self",
         "summary": "[TODO][MUST]$$/document/tracking/aliases/0$$: $$/document/title$$ - CSAF",
-        "url": "https://$VENDORSLUG$.csaf-tp.certvde.com/.well-known/csaf/white/$YEAR$/$$/document/tracking/aliases/0$$.json/TODO.MUST",
-        "category": "self"
+        "url": "https://$VENDORSLUG$.csaf-tp.certvde.com/.well-known/csaf/white/$YEAR$/$$/document/tracking/aliases/0$$.json/TODO.MUST"
       }
     ],
     "title": "[TODO][MUST][VENDOR-CHOICE] Title (description)",
@@ -395,31 +395,6 @@
             "CSAFPID-31001",
             "CSAFPID-31002",
             "CSAFPID-31003"
-          ]
-        },
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "NONE",
-            "baseScore": 0,
-            "baseSeverity": "NONE",
-            "confidentialityImpact": "NONE",
-            "environmentalScore": 0,
-            "environmentalSeverity": "NONE",
-            "integrityImpact": "NONE",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "temporalScore": 0,
-            "temporalSeverity": "NONE",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N",
-            "version": "3.1"
-          },
-          "products": [
-            "CSAFPID-32001",
-            "CSAFPID-32002",
-            "CSAFPID-32003"
           ]
         }
       ],
