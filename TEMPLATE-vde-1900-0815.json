@@ -187,9 +187,9 @@
                   },
                   {
                     "category": "product_version_range",
-                    "name": "< 8.4.2",
+                    "name": "<8.4.2",
                     "product": {
-                      "name": "Firmware PRODUCT_FAMILY01 < 8.4.2",
+                      "name": "Firmware PRODUCT_FAMILY01 <8.4.2",
                       "product_id": "CSAFPID-21001"
                     }
                   }
@@ -215,9 +215,9 @@
                   },
                   {
                     "category": "product_version_range",
-                    "name": "< 8.4.2",
+                    "name": "<8.4.2",
                     "product": {
-                      "name": "Software Engineering SDK < 8.4.2",
+                      "name": "Software Engineering SDK <8.4.2",
                       "product_id": "CSAFPID-51001"
                     }
                   }
@@ -272,7 +272,7 @@
       {
         "category": "installed_on",
         "full_product_name": {
-          "name": "FW < 8.4.2 installed on PRODUCT_NAME_01 HW rev a",
+          "name": "FW <8.4.2 installed on PRODUCT_NAME_01 HW rev a",
           "product_id": "CSAFPID-31001"
         },
         "product_reference": "CSAFPID-21001",
@@ -281,7 +281,7 @@
       {
         "category": "installed_on",
         "full_product_name": {
-          "name": "FW < 8.4.2 installed on PRODUCT_NAME_02",
+          "name": "FW <8.4.2 installed on PRODUCT_NAME_02",
           "product_id": "CSAFPID-31002"
         },
         "product_reference": "CSAFPID-21001",
@@ -308,7 +308,7 @@
       {
         "category": "installed_on",
         "full_product_name": {
-          "name": "Software Engineering SDK < 8.4.2 installed on Microsoft Windows",
+          "name": "Software Engineering SDK <8.4.2 installed on Microsoft Windows",
           "product_id": "CSAFPID-31003"
         },
         "product_reference": "CSAFPID-51001",
