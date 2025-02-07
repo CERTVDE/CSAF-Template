@@ -25,6 +25,73 @@ Bei Anmerkungen oder Änderungsbedarf dürfen gerne auch die Issues verwendet we
 
 Die Dokumentation befindet sich im hier im Projekt-Wiki (Link ToDo)
 
+
+## Variablen, Referenzen, Tags und Kommentare
+
+Das Template verwendet einige Definitionen um die spätere Bearbeitung oder Verarbeitung zu vereinfachen.
+
+### Variablen
+
+Werden für gewöhnlich mit ihrem außerhalb dieses Dokuments definierten Wert ersetzt. Sollte kein
+Wert gesetzt sein, wird der Standardwert (hinter dem "=") verwendet oder kein Inhalt eingesetzt.
+Die Verarbeitung und das Einsetzen entsprechender Werte muss dann außerhalb des Templates mit 
+entsprechenden Tools und Scripten erfolgen.
+
+`${Variable01}$`  
+definiert eine Variable namens _Variable01_. Diese muss außerhalb des Dokuments definiert
+werden oder bleibt leer. 
+
+`${Variable02=Beispielwert hier}$`  
+definiert eine Variable namens _Variable02_ diese hat den Standardwert: _Beispielwert hier_,
+wenn sie nicht anderweitig einen Wert zugewiesen bekommt.
+
+`${Variable03=Ein anderer Standardwert, der "${Variable02}$" von Variable02 beinhaltet}$`  
+definiert eine Variable namens _Variable03_ die den Wert:
+_Ein anderer Standardwert, der "Beispielwert hier" von Variable02 beinhaltet_, 
+wenn Variable02 und Variable03 nicht anders gesetzt werden.  
+
+
+### Referenzen
+
+...sind Links zu Werten, Objekten oder Arrays in dem Template ansich. Zur verlinkung
+wird [JSONPath](https://datatracker.ietf.org/doc/html/rfc9535) verwendet
+
+`%{$.document.tracking.id}%`  
+verwendet den referenzierten Wert des document tracking Objektes: `[TODO][MUST]VDE-1900-0815` 
+
+`${$.document.notes[0]}$`  
+verweist auf das komplette Objekt der ersten Document Note : `"audience": "csaf creator", "category": "other", "text": "[CERT@VDE CSAF Template](https://github.com/CERTVDE/CSAF-Template) © 2024 by [CERT@VDE](https://certvde.com) is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1) \n\nThis document note may only be removed in order to create a CSAF advisory based on this template.", "title": "LICENSE"`  
+
+`${$.document.notes[0].title}$`  
+verweist auf den Wert von title im ersten Document Note Objekt: `"LICENSE"`
+
+### Tags
+
+Tags sind Markierungen oder Hinweise zu Aufgaben, die noch zu erledigen sind.
+Das Tag `[TODO]` markiert Stellen im Template die zwingend bearbeitet werden müssen. Die Inhalte
+dort enthalten eventuell noch Beispieldaten, die entfernt werden müssen, oder hier sind einfach 
+noch Pflichtangaben zu machen. 
+An zweiter Stelle kann ein Tag mit einem Begriff aus RFC2119 verwendet werden, also  
+`[MUST]`, `[SHOULD]` oder `[MAY]`.
+An dritter Stelle kann optional der Tag `[REMOVE]` stehen. Das ist ein Hinweis, dass der Abschnitt
+oder das Objekt vollständig entfernt werden kann.
+
+### Kommentare
+
+Kommentare werden im Template als Hinweise für den Anwender genutzt. Sie können mit Tags 
+beginnen. Dabei ist die Reihenfolge (siehe Tags) einzuhalten. Vor dem Veröffentlichen
+eines CSAF müssen alle Kommentare aus dem Dokument entfernt werden.
+
+`#{Hier ist ein Kommentar}#`  
+Der Kommentar "_Hier ist ein Kommentar_".
+
+`#{[TODO][SHOULD] Ein Kommentar kann auch Werte von Variablen beinhalten "${Variable02}$"}`  
+Der Kommentar: '_[TODO][SHOULD] Ein Kommentar kann auch Werte von Variablen beinhalten "Beispielwert hier"_'
+
+`#{Ein Kommentar kann auch auf eine Referenz verweisen, wie hier: "%{$.document.tracking.id}%"}`  
+Auch Referenzen können verwendet werden: '_Ein Kommentar kann auch auf eine Referenz verweisen, wie hier: "[TODO][MUST]VDE-1900-0815"_'
+
+
 ## Nummernkreise für CSAFPIDs
 
 Bitte wenn möglich die Nummernkreise für CSAFPIDs beachten:
