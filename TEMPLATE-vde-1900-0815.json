@@ -2,26 +2,26 @@
   "document": {
     "acknowledgments": [
       {
-        "organization": "CERT@VDE",
-        "summary": "coordination",
+        "organization": "${ack_organization=CERT@VDE}$",
+        "summary": "${ack_summary=coordination}$",
         "urls": [
-          "https://certvde.com"
+          "${ack_url=https://certvde.com}$"
         ]
       },
       {
         "names": [
-          "[TODO][MAY] Chucky"
+          "#{[TODO][MAY] A researcher for example}#"
         ],
-        "organization": "[TODO][MAY] Security Nightmares Inc.",
+        "organization": "#{[TODO][MAY] Security Nightmares Inc.}#",
         "summary": "reporting",
         "urls": [
-          "https://www.example.com"
+          "#{https://www.example.com}#"
         ]
       }
     ],
     "aggregate_severity": {
-      "namespace": "https://vendor.tld",
-      "text": "[TODO][MAY] critical/high..."
+      "namespace": "${aggr_sev_namespace=}$",
+      "text": "#{[TODO][MAY] critical/high...}#"
     },
     "category": "csaf_security_advisory",
     "csaf_version": "2.0",
@@ -30,47 +30,47 @@
         "label": "WHITE"
       }
     },
-    "lang": "en-GB",
+    "lang": "${doc_lang=en-GB}$",
     "notes": [
       {
         "audience": "csaf creator",
         "category": "other",
-        "text": "[CERT@VDE CSAF Template](https://github.com/CERTVDE/CSAF-Template) © 2024 by [CERT@VDE](https://certvde.com) is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1) \n\nThis document note may only be removed in order to create a CSAF advisory based on this template.",
+        "text": "#{[TODO][SHOULD][REMOVE]}# Link to repository: [CERT@VDE CSAF Template](https://github.com/CERTVDE/CSAF-Template) © 2025 by [CERT@VDE](https://certvde.com) is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1) \n\nThis document note may only be removed in order to create a CSAF advisory based on this template.",
         "title": "LICENSE"
       },
       {
         "category": "summary",
-        "text": "[TODO][MUST]\nSummary content",
+        "text": "${note_summary=[TODO][MUST]\nSummary content}$",
         "title": "Summary"
       },
       {
         "category": "description",
-        "text": "[TODO][SHOULD]\nImpact content",
+        "text": "${note_impact=[TODO][SHOULD]\nImpact content}$",
         "title": "Impact"
       },
       {
         "category": "description",
-        "text": "[TODO][SHOULD]\nMitigation content",
+        "text": "${note_mitigation=[TODO][SHOULD]\nMitigation content}$",
         "title": "Mitigation"
       },
       {
         "category": "description",
-        "text": "[TODO][SHOULD]\nRemediation content",
+        "text": "${note_remediation=[TODO][SHOULD]\nRemediation content}$",
         "title": "Remediation"
       },
       {
         "category": "general",
-        "text": "[TODO][MAY]\nGeneral recomendation",
+        "text": "${note_general_recommendation=[TODO][MAY]\nGeneral recommendation}$",
         "title": "General Recommendation"
       },
       {
         "category": "legal_disclaimer",
-        "text": "[TODO][MAY]",
+        "text": "${note_legal_disclaimer=[TODO][MAY]}$",
         "title": "Disclaimer"
       },
       {
         "category": "description",
-        "text": "[TODO][MAY] What kind of product ",
+        "text": "${note_prod_desc=[TODO][MAY] What kind of product}$",
         "title": "Product Description"
       }
     ],
