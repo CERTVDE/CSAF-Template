@@ -332,19 +332,19 @@
         {
           "audience": "all",
           "category": "description",
-          "text": "[TODO][MUST]] \nShort vulnerability description like in the CVE",
+          "text": "#{[TODO][MUST]] \nShort vulnerability description like in the CVE}#",
           "title": "Vulnerability Description"
         },
         {
           "audience": "operational management and system administrators",
           "category": "details",
-          "text": "[TODO][MAY] \nHow does the CVE affect the products of this advisory?",
+          "text": "#{[TODO][MAY] \nHow does the CVE affect the products of this advisory?}#",
           "title": "Vulnerability characterisation"
         },
         {
           "category": "details",
-          "text": "[TODO][MAY]e.g. No network interface so AV is local.",
-          "title": "Details for PRODUCT 01 HW rev a"
+          "text": "#{[TODO][MAY]e.g. No network interface so AV is local.}#",
+          "title": "#{Details for PRODUCT 01 HW rev a...}#"
         }
       ],
       "product_status": {
@@ -362,9 +362,9 @@
       "remediations": [
         {
           "category": "mitigation",
-          "details": "[TODO][MUST]usually the same as /document_notes/mitigation",
+          "details": "#{[TODO][MUST]usually the same as /document_notes/mitigation}#",
           "entitlements": [
-            "[TODO][MAY][if applicable]\nConditions that must be fulfilled in order to receive the patch or implement the mitigation action.\n\nExample:\n\nAn active support contract is required."
+            "#{[TODO][MAY][if applicable]\nConditions that must be fulfilled in order to receive the patch or implement the mitigation action.\n\nExample:\n\nAn active support contract is required.}#"
           ],
           "group_ids": [
             "CSAFGID-0001"
