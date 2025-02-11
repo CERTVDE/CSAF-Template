@@ -76,37 +76,37 @@
     ],
     "publisher": {
       "category": "vendor",
-      "contact_details": "[TODO]psirt@vendor.tld",
-      "issuing_authority": "[TODO]",
-      "name": "[TODO]Vendor GmbH/AG/SE & Co KG",
-      "namespace": "https://vendor.tld.TODO.MUST"
+      "contact_details": "${publisher_contact=[TODO]psirt@vendor.tld}$",
+      "issuing_authority": "${publisher_issuing_auth=[TODO][MAY]}$",
+      "name": "${publisher_name=[TODO][MUST]Vendor GmbH/AG/SE & Co KG}$",
+      "namespace": "${publisher_namespace=[TODO][MUST]https://vendor.tld.TODO.MUST}$"
     },
     "references": [
       {
         "category": "external",
-        "summary": "[TODO][SHOULD]\n$VENDORPSIRTDESCRIPTION$",
-        "url": "https://$VENDORPSIRTURL$.TODO.SHOULD"
+        "summary": "${refs_vendorpsirt_summary=[TODO][SHOULD]\nVENDORPSIRTDESCRIPTION}$",
+        "url": "${refs_vendorpsirt_url=https://VENDORPSIRTURL}$"
       },
       {
         "category": "external",
-        "summary": "CERT@VDE Security Advisories for [TODO][VENDOR][MUST]",
-        "url": "https://certvde.com/en/advisories/vendor/$VENDORSLUG$/TODO.MUST"
+        "summary": "${refs_certvde_vendorpage_summary=CERT@VDE Security Advisories for ${publisher_name=VENDORNAME}$}$",
+        "url": "${refs_certvde_vendorpage_url=https://certvde.com/en/advisories/vendor/${vendorslug}$/}$"
       },
       {
         "category": "self",
-        "summary": "[TODO][MUST]$$/document/tracking/aliases/0$$: $$/document/title$$ - HTML",
-        "url": "https://certvde.com/en/advisories/$$/document/tracking/aliases/0$$/TODO.MUST"
+        "summary": "#{[MUST]}#${refs_canonical_html_summary=%{$.document.tracking.id%}: %{$.document.title}% - HTML",
+        "url": "${refs_canonical_html_url=https://certvde.com/en/advisories/%{$.document.tracking.aliases[0]%}/"
       },
       {
         "category": "self",
-        "summary": "[TODO][MUST]$$/document/tracking/aliases/0$$: $$/document/title$$ - CSAF",
-        "url": "https://$VENDORSLUG$.csaf-tp.certvde.com/.well-known/csaf/white/$YEAR$/$$/document/tracking/aliases/0$$.json/TODO.MUST"
+        "summary": "#{[MUST]}#${refs_canonical_csaf_summary=%{$.document.tracking.id%}: %{$.document.title}% - CSAF",
+        "url": "https://${vendorslug}$.csaf-tp.certvde.com/.well-known/csaf/white/${publish_year}$/%{$.document.title}%.json/"
       }
     ],
-    "title": "[TODO][MUST][VENDOR-CHOICE] Title (description)",
+    "title": "#{[TODO][MUST][VENDOR-CHOICE]}#${document_title=Title (description)}$",
     "tracking": {
       "aliases": [
-        "[TODO][MUST]VDE-1900-0815"
+        "#{[TODO][MUST]First alias must be VDE-ID, more aliases are optional}#${vde_id=VDE-0815-4711}$"
       ],
       "current_release_date": "2024-05-27T10:00:00.000Z",
       "generator": {
@@ -116,7 +116,7 @@
           "version": "2.5.12"
         }
       },
-      "id": "[TODO][MUST]VDE-1900-0815",
+      "id": "#{[TODO][MUST]Document ID is also used for the filename}#${document_id=${vde_id}$}$",
       "initial_release_date": "2024-05-27T10:00:00.000Z",
       "revision_history": [
         {
