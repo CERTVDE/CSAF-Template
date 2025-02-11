@@ -108,7 +108,7 @@
       "aliases": [
         "#{[TODO][MUST]First alias must be VDE-ID, more aliases are optional}#${vde_id=VDE-0815-4711}$"
       ],
-      "current_release_date": "2024-05-27T10:00:00.000Z",
+      "current_release_date": "${current_release_date=${initial_revision_number}$}#{[TODO][MUST]Must be the date of the newest revision}#",
       "generator": {
         "date": "2024-10-24T13:03:24.888Z",
         "engine": {
@@ -117,16 +117,16 @@
         }
       },
       "id": "#{[TODO][MUST]Document ID is also used for the filename}#${document_id=${vde_id}$}$",
-      "initial_release_date": "2024-05-27T10:00:00.000Z",
+      "initial_release_date": "${initial_release_date=1900-01-01T00:00:00.000Z}$",
       "revision_history": [
         {
-          "date": "2024-05-27T10:00:00.000Z",
-          "number": "1",
-          "summary": "Initial revision."
+          "date": "${initial_revision_date=${initial_release_date}$}$",
+          "number": "${initial_revision_number=1}$",
+          "summary": "${initial_revision_summary=Initial revision.}$"
         }
       ],
-      "status": "draft",
-      "version": "1"
+      "status": "${document_status=draft}$",
+      "version": "${document_version=${initial_revision_number}$}$#{Version number of the newest revision}#"
     }
   },
   "product_tree": {
