@@ -2,26 +2,26 @@
   "document": {
     "acknowledgments": [
       {
-        "organization": "CERT@VDE",
-        "summary": "coordination",
+        "organization": "${ack_organization=CERT@VDE}$",
+        "summary": "${ack_summary=coordination}$",
         "urls": [
-          "https://certvde.com"
+          "${ack_url=https://certvde.com}$"
         ]
       },
       {
         "names": [
-          "[TODO][MAY] Chucky"
+          "#{[TODO][MAY] A researcher for example}#"
         ],
-        "organization": "[TODO][MAY] Security Nightmares Inc.",
+        "organization": "#{[TODO][MAY] Security Nightmares Inc.}#",
         "summary": "reporting",
         "urls": [
-          "https://www.example.com"
+          "#{https://www.example.com}#"
         ]
       }
     ],
     "aggregate_severity": {
-      "namespace": "https://vendor.tld",
-      "text": "[TODO][MAY] critical/high..."
+      "namespace": "${aggr_sev_namespace=}$",
+      "text": "#{[TODO][MAY] critical/high...}#"
     },
     "category": "csaf_security_advisory",
     "csaf_version": "2.0",
@@ -30,85 +30,85 @@
         "label": "WHITE"
       }
     },
-    "lang": "en-GB",
+    "lang": "${doc_lang=en-GB}$",
     "notes": [
       {
         "audience": "csaf creator",
         "category": "other",
-        "text": "[CERT@VDE CSAF Template](https://github.com/CERTVDE/CSAF-Template) © 2024 by [CERT@VDE](https://certvde.com) is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1) \n\nThis document note may only be removed in order to create a CSAF advisory based on this template.",
+        "text": "#{[TODO][SHOULD][REMOVE]}# Link to repository: [CERT@VDE CSAF Template](https://github.com/CERTVDE/CSAF-Template) © 2025 by [CERT@VDE](https://certvde.com) is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1) \n\nThis document note may only be removed in order to create a CSAF advisory based on this template.",
         "title": "LICENSE"
       },
       {
         "category": "summary",
-        "text": "[TODO][MUST]\nSummary content",
+        "text": "${note_summary=[TODO][MUST]\nSummary content}$",
         "title": "Summary"
       },
       {
         "category": "description",
-        "text": "[TODO][SHOULD]\nImpact content",
+        "text": "${note_impact=[TODO][SHOULD]\nImpact content}$",
         "title": "Impact"
       },
       {
         "category": "description",
-        "text": "[TODO][SHOULD]\nMitigation content",
+        "text": "${note_mitigation=[TODO][SHOULD]\nMitigation content}$",
         "title": "Mitigation"
       },
       {
         "category": "description",
-        "text": "[TODO][SHOULD]\nRemediation content",
+        "text": "${note_remediation=[TODO][SHOULD]\nRemediation content}$",
         "title": "Remediation"
       },
       {
         "category": "general",
-        "text": "[TODO][MAY]\nGeneral recomendation",
+        "text": "${note_general_recommendation=[TODO][MAY]\nGeneral recommendation}$",
         "title": "General Recommendation"
       },
       {
         "category": "legal_disclaimer",
-        "text": "[TODO][MAY]",
+        "text": "${note_legal_disclaimer=[TODO][MAY]}$",
         "title": "Disclaimer"
       },
       {
         "category": "description",
-        "text": "[TODO][MAY] What kind of product ",
+        "text": "${note_prod_desc=[TODO][MAY] What kind of product}$",
         "title": "Product Description"
       }
     ],
     "publisher": {
       "category": "vendor",
-      "contact_details": "[TODO]psirt@vendor.tld",
-      "issuing_authority": "[TODO]",
-      "name": "[TODO]Vendor GmbH/AG/SE & Co KG",
-      "namespace": "https://vendor.tld.TODO.MUST"
+      "contact_details": "${publisher_contact=[TODO]psirt@vendor.tld}$",
+      "issuing_authority": "${publisher_issuing_auth=[TODO][MAY]}$",
+      "name": "${publisher_name=[TODO][MUST]Vendor GmbH/AG/SE & Co KG}$",
+      "namespace": "${publisher_namespace=[TODO][MUST]https://vendor.tld.TODO.MUST}$"
     },
     "references": [
       {
         "category": "external",
-        "summary": "[TODO][SHOULD]\n$VENDORPSIRTDESCRIPTION$",
-        "url": "https://$VENDORPSIRTURL$.TODO.SHOULD"
+        "summary": "${refs_vendorpsirt_summary=[TODO][SHOULD]\nVENDORPSIRTDESCRIPTION}$",
+        "url": "${refs_vendorpsirt_url=https://VENDORPSIRTURL}$"
       },
       {
         "category": "external",
-        "summary": "CERT@VDE Security Advisories for [TODO][VENDOR][MUST]",
-        "url": "https://certvde.com/en/advisories/vendor/$VENDORSLUG$/TODO.MUST"
+        "summary": "${refs_certvde_vendorpage_summary=CERT@VDE Security Advisories for ${publisher_name=VENDORNAME}$}$",
+        "url": "${refs_certvde_vendorpage_url=https://certvde.com/en/advisories/vendor/${vendorslug}$/}$"
       },
       {
         "category": "self",
-        "summary": "[TODO][MUST]$$/document/tracking/aliases/0$$: $$/document/title$$ - HTML",
-        "url": "https://certvde.com/en/advisories/$$/document/tracking/aliases/0$$/TODO.MUST"
+        "summary": "#{[MUST]}#${refs_canonical_html_summary=%{$.document.tracking.id%}: %{$.document.title}% - HTML",
+        "url": "${refs_canonical_html_url=https://certvde.com/en/advisories/%{$.document.tracking.aliases[0]%}/"
       },
       {
         "category": "self",
-        "summary": "[TODO][MUST]$$/document/tracking/aliases/0$$: $$/document/title$$ - CSAF",
-        "url": "https://$VENDORSLUG$.csaf-tp.certvde.com/.well-known/csaf/white/$YEAR$/$$/document/tracking/aliases/0$$.json/TODO.MUST"
+        "summary": "#{[MUST]}#${refs_canonical_csaf_summary=%{$.document.tracking.id%}: %{$.document.title}% - CSAF",
+        "url": "https://${vendorslug}$.csaf-tp.certvde.com/.well-known/csaf/white/${publish_year}$/%{$.document.title}%.json/"
       }
     ],
-    "title": "[TODO][MUST][VENDOR-CHOICE] Title (description)",
+    "title": "#{[TODO][MUST][VENDOR-CHOICE]}#${document_title=Title (description)}$",
     "tracking": {
       "aliases": [
-        "[TODO][MUST]VDE-1900-0815"
+        "#{[TODO][MUST]First alias must be VDE-ID, more aliases are optional}#${vde_id=VDE-0815-4711}$"
       ],
-      "current_release_date": "2024-05-27T10:00:00.000Z",
+      "current_release_date": "${current_release_date=${initial_revision_number}$}#{[TODO][MUST]Must be the date of the newest revision}#",
       "generator": {
         "date": "2024-10-24T13:03:24.888Z",
         "engine": {
@@ -116,17 +116,17 @@
           "version": "2.5.12"
         }
       },
-      "id": "[TODO][MUST]VDE-1900-0815",
-      "initial_release_date": "2024-05-27T10:00:00.000Z",
+      "id": "#{[TODO][MUST]Document ID is also used for the filename}#${document_id=${vde_id}$}$",
+      "initial_release_date": "${initial_release_date=1900-01-01T00:00:00.000Z}$",
       "revision_history": [
         {
-          "date": "2024-05-27T10:00:00.000Z",
-          "number": "1",
-          "summary": "Initial revision."
+          "date": "${initial_revision_date=${initial_release_date}$}$",
+          "number": "${initial_revision_number=1}$",
+          "summary": "${initial_revision_summary=Initial revision.}$"
         }
       ],
-      "status": "draft",
-      "version": "1"
+      "status": "${document_status=draft}$",
+      "version": "${document_version=${initial_revision_number}$}$#{Version number of the newest revision}#"
     }
   },
   "product_tree": {
@@ -332,19 +332,19 @@
         {
           "audience": "all",
           "category": "description",
-          "text": "[TODO][MUST]] \nShort vulnerability description like in the CVE",
+          "text": "#{[TODO][MUST]] \nShort vulnerability description like in the CVE}#",
           "title": "Vulnerability Description"
         },
         {
           "audience": "operational management and system administrators",
           "category": "details",
-          "text": "[TODO][MAY] \nHow does the CVE affect the products of this advisory?",
+          "text": "#{[TODO][MAY] \nHow does the CVE affect the products of this advisory?}#",
           "title": "Vulnerability characterisation"
         },
         {
           "category": "details",
-          "text": "[TODO][MAY]e.g. No network interface so AV is local.",
-          "title": "Details for PRODUCT 01 HW rev a"
+          "text": "#{[TODO][MAY]e.g. No network interface so AV is local.}#",
+          "title": "#{Details for PRODUCT 01 HW rev a...}#"
         }
       ],
       "product_status": {
@@ -362,9 +362,9 @@
       "remediations": [
         {
           "category": "mitigation",
-          "details": "[TODO][MUST]usually the same as /document_notes/mitigation",
+          "details": "#{[TODO][MUST]usually the same as /document_notes/mitigation}#",
           "entitlements": [
-            "[TODO][MAY][if applicable]\nConditions that must be fulfilled in order to receive the patch or implement the mitigation action.\n\nExample:\n\nAn active support contract is required."
+            "#{[TODO][MAY][if applicable]\nConditions that must be fulfilled in order to receive the patch or implement the mitigation action.\n\nExample:\n\nAn active support contract is required.}#"
           ],
           "group_ids": [
             "CSAFGID-0001"
