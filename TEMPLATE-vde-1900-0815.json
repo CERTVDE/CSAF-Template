@@ -94,12 +94,12 @@
       },
       {
         "category": "self",
-        "summary": "#{[MUST]}#${refs_canonical_html_summary=%{$.document.tracking.id%}: %{$.document.title}% - HTML",
-        "url": "${refs_canonical_html_url=https://certvde.com/en/advisories/%{$.document.tracking.aliases[0]%}/"
+        "summary": "#{[MUST]}#${refs_canonical_html_summary=%{$.document.tracking.id}%: %{$.document.title}% - HTML}$",
+        "url": "${refs_canonical_html_url=https://certvde.com/en/advisories/%{$.document.tracking.aliases[0]}%}$/"
       },
       {
         "category": "self",
-        "summary": "#{[MUST]}#${refs_canonical_csaf_summary=%{$.document.tracking.id%}: %{$.document.title}% - CSAF",
+        "summary": "#{[MUST]}#${refs_canonical_csaf_summary=%{$.document.tracking.id}%: %{$.document.title}% - CSAF}$",
         "url": "https://${vendorslug}$.csaf-tp.certvde.com/.well-known/csaf/white/${publish_year}$/%{$.document.title}%.json/"
       }
     ],
@@ -398,7 +398,7 @@
           ]
         }
       ],
-      "title": "CVE-1900-0815"
+      "title": "%{$.vulnerabilities[0].cve}%#{Title must be CVE-ID, too}#"
     }
   ]
 }
