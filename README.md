@@ -25,6 +25,25 @@ Bei Anmerkungen oder Änderungsbedarf dürfen gerne auch die Issues verwendet we
 
 Die Dokumentation befindet sich im hier im Projekt-Wiki (Link ToDo)
 
+## Revisionen / Versionen des CSAF Dokuments
+
+Wir verwenden Semver als Versionsschema für die CSAF Dokumente. Dabei gibt es folgende Richtlinien:
+Das Schema besteht aus Major.Minor.Patch, also zum BEispiel 2.3.1 Wobei hier 2 die Major-, 3 die Minor- und 1 die Patchversion darstellt.
+Wird **Minor** erhöht, so wird **Patch** auf 0 gesetzt.
+Wird **Major** erhöht, so werden **Minor und Patch** jeweils auf 0 gesetzt.
+
+
+Die erste Veröffentlichung hat Version 1.0.0
+
+**Patch** wird erhöht bei kleineren Änderungen am Dokument, die technisch nicht relevant sind. Das können Typos und Layoutfehler sein, oder aber auch Änderungen in den Metadaten oder CSAF internen Daten, wie zum Beispiel Korrekturen eines Revisionstextes.
+
+**Minor** wird erhöht bei kleinen Änderungen die aber technisch relevant sind. Wie zum Beispiel das hinzufügen einzelner Produkte oder andere Änderungen mit keinem allzu großen Impact.
+
+**Major** wird erhöht bei großen technisch relevanten Änderungen wie zum Beispiel:
+ - hinzufügen oder entfernen ganzer Produktfamilien
+ - Änderungen/Updates an CVE Einträgen
+ - andere große Änderungen die eine Neubewertung des Advisorys nötig gemacht haben
+
 
 ## Variablen, Referenzen, Tags und Kommentare
 
