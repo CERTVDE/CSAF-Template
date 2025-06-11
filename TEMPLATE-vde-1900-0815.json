@@ -121,7 +121,7 @@
       "revision_history": [
         {
           "date": "${initial_revision_date=${initial_release_date}$}$",
-          "number": "${initial_revision_number=1}$",
+          "number": "${initial_revision_number=1.0.0}$#{Semver is used, see documentation}#",
           "summary": "${initial_revision_summary=Initial revision.}$"
         }
       ],
