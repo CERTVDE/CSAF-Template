@@ -110,10 +110,10 @@
       ],
       "current_release_date": "${current_release_date=${initial_revision_number}$}#{[TODO][MUST]Must be the date of the newest revision}#",
       "generator": {
-        "date": "2024-10-24T13:03:24.888Z",
+        "date": "2025-09-30T10:17:09.892Z",
         "engine": {
           "name": "Secvisogram",
-          "version": "2.5.12"
+          "version": "2.5.34"
         }
       },
       "id": "#{[TODO][MUST]Document ID is also used for the filename}#${document_id=${vde_id}$}$",
@@ -246,6 +246,82 @@
         ],
         "category": "vendor",
         "name": "Microsoft"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "3.3.0<3.3.2",
+                "product": {
+                  "name": "OpenSSL 3.3.0<3.3.2",
+                  "product_id": "CSAFPID-51010"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "3.2.0<3.2.3",
+                "product": {
+                  "name": "OpenSSL 3.2.0<3.2.3",
+                  "product_id": "CSAFPID-51011"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "3.1.0<3.1.7",
+                "product": {
+                  "name": "OpenSSL 3.1.0<3.1.7",
+                  "product_id": "CSAFPID-51012"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "3.0.0<3.0.15",
+                "product": {
+                  "name": "OpenSSL 3.0.0<3.0.15",
+                  "product_id": "CSAFPID-51013"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "3.3.2",
+                "product": {
+                  "name": "OpenSSL 3.3.2",
+                  "product_id": "CSAFPID-52010"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "3.2.3",
+                "product": {
+                  "name": "OpenSSL 3.2.3",
+                  "product_id": "CSAFPID-52011"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "3.1.7",
+                "product": {
+                  "name": "OpenSSL 3.1.7",
+                  "product_id": "CSAFPID-52012"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "3.0.15",
+                "product": {
+                  "name": "OpenSSL 3.0.15",
+                  "product_id": "CSAFPID-52013"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "OpenSSL"
+          }
+        ],
+        "category": "vendor",
+        "name": "OpenSSL Software Foundation"
       }
     ],
     "product_groups": [
@@ -339,7 +415,7 @@
           "audience": "operational management and system administrators",
           "category": "details",
           "text": "#{[TODO][MAY] \nHow does the CVE affect the products of this advisory?}#",
-          "title": "Vulnerability characterisation"
+          "title": "Vulnerability Characterisation"
         },
         {
           "category": "details",
@@ -399,6 +475,99 @@
         }
       ],
       "title": "#{[TODO][MUST]] \nTitle of the CVE. E.g.: [Product] (with [version]) by [Vendor] is prone to [Vuln]}#"
+    },
+    {
+      "cve": "CVE-2024-6119",
+      "cwe": {
+        "id": "CWE-843",
+        "name": "Access of Resource Using Incompatible Type ('Type Confusion')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Issue summary: Applications performing certificate name checks (e.g., TLS clients checking server certificates) may attempt to read an invalid memory address resulting in abnormal termination of the application process. Impact summary: Abnormal termination of an application can a cause a denial of service. Applications performing certificate name checks (e.g., TLS clients checking server certificates) may attempt to read an invalid memory address when comparing the expected name with an `otherName` subject alternative name of an X.509 certificate. This may result in an exception that terminates the application program. Note that basic certificate chain validation (signatures, dates, ...) is not affected, the denial of service can occur only when the application also specifies an expected DNS name, Email address or IP address. TLS servers rarely solicit client certificates, and even when they do, they generally don't perform a name check against a reference identifier (expected identity), but rather extract the presented identity after checking the certificate chain. So TLS servers are generally not affected and the severity of the issue is Moderate. The FIPS modules in 3.3, 3.2, 3.1 and 3.0 are not affected by this issue.",
+          "title": "Vulnerability Description"
+        },
+        {
+          "category": "other",
+          "text": "This vulnerability is an example for the usage of a product specific CVSS vector that is not in the CVE. It references the original score with the product from the CVE entry and adds a product specific CVSS for the vendors product. Using this constellation requires the vulnerability note \"Vulnerability Characterisation\" and a detailed description why the vector is different to the vector from the CVE.",
+          "title": "CSAF-Template Description"
+        },
+        {
+          "audience": "operational management and system administrators",
+          "category": "details",
+          "text": "#{[TODO][MAY] \nHow does the CVE affect the products of this advisory? E.g. As the product has no network interface the vulnerability can only be used locally on the system.}#",
+          "title": "Vulnerability Characterisation"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "CSAFPID-52010",
+          "CSAFPID-52011",
+          "CSAFPID-52012",
+          "CSAFPID-52013",
+          "CSAFPID-52001"
+        ],
+        "known_affected": [
+          "CSAFPID-51010",
+          "CSAFPID-51011",
+          "CSAFPID-51012",
+          "CSAFPID-51013",
+          "CSAFPID-51001"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "environmentalScore": 7.5,
+            "environmentalSeverity": "HIGH",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "temporalScore": 7.5,
+            "temporalSeverity": "HIGH",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-51010",
+            "CSAFPID-51011",
+            "CSAFPID-51012",
+            "CSAFPID-51013"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "NONE",
+            "baseScore": 6.2,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "HIGH",
+            "environmentalScore": 6.2,
+            "environmentalSeverity": "MEDIUM",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "temporalScore": 6.2,
+            "temporalSeverity": "MEDIUM",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-51001"
+          ]
+        }
+      ],
+      "title": "Possible denial of service in X.509 name checks"
     }
   ]
 }
