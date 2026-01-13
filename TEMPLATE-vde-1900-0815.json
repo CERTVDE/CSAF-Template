@@ -20,7 +20,7 @@
       }
     ],
     "aggregate_severity": {
-      "namespace": "${aggr_sev_namespace=}$",
+      "namespace": "${aggr_sev_namespace=https://www.first.org/cvss/v4.0/specification-document#Qualitative-Severity-Rating-Scale}$",
       "text": "#{[TODO][MAY] critical/high...}#"
     },
     "category": "csaf_security_advisory",
@@ -110,10 +110,10 @@
       ],
       "current_release_date": "${current_release_date=${initial_revision_number}$}#{[TODO][MUST]Must be the date of the newest revision}#",
       "generator": {
-        "date": "2025-11-18T12:18:26.776Z",
+        "date": "2026-01-13T07:27:13.465Z",
         "engine": {
           "name": "Secvisogram",
-          "version": "2.5.38"
+          "version": "2.5.40"
         }
       },
       "id": "#{[TODO][MUST]Document ID is also used for the filename}#${document_id=${vde_id}$}$",
@@ -162,7 +162,12 @@
                     "name": "PRODUCT_NAME_02",
                     "product": {
                       "name": "PRODUCT_NAME_02",
-                      "product_id": "CSAFPID-11002"
+                      "product_id": "CSAFPID-11002",
+                      "product_identification_helper": {
+                        "model_numbers": [
+                          "234-568"
+                        ]
+                      }
                     }
                   }
                 ],
@@ -182,15 +187,32 @@
                     "name": "8.4.2",
                     "product": {
                       "name": "Firmware PRODUCT_FAMILY01 8.4.2",
-                      "product_id": "CSAFPID-22001"
+                      "product_id": "CSAFPID-22001",
+                      "product_identification_helper": {
+                        "cpe": "cpe:2.3:o:vendor_name:product_family01:8.4.2:-:*:*:*:*:*:*"
+                      }
                     }
                   },
                   {
-                    "category": "product_version_range",
-                    "name": "<8.4.2",
+                    "category": "product_version",
+                    "name": "8.4.1",
                     "product": {
-                      "name": "Firmware PRODUCT_FAMILY01 <8.4.2",
-                      "product_id": "CSAFPID-21001"
+                      "name": "Firmware PRODUCT_FAMILY01 8.0.0<8.4.2",
+                      "product_id": "CSAFPID-21002",
+                      "product_identification_helper": {
+                        "cpe": "cpe:2.3:o:vendor_name:product_family01:8.4.1:-:*:*:*:*:*:*"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "8.0.0",
+                    "product": {
+                      "name": "Firmware 8.0.0",
+                      "product_id": "CSAFPID-21001",
+                      "product_identification_helper": {
+                        "cpe": "cpe:2.3:o:vendor_name:product_family01:8.0.0:-:*:*:*:*:*:*"
+                      }
                     }
                   }
                 ],
@@ -210,15 +232,21 @@
                     "name": "8.4.2",
                     "product": {
                       "name": "Software Engineering SDK 8.4.2",
-                      "product_id": "CSAFPID-52001"
+                      "product_id": "CSAFPID-52001",
+                      "product_identification_helper": {
+                        "cpe": "cpe:2.3:a:vendor_name:engineering_sdk:8.4.2:-:*:*:*:*:*:*"
+                      }
                     }
                   },
                   {
                     "category": "product_version_range",
-                    "name": "<8.4.2",
+                    "name": "vers:semver/<8.4.2",
                     "product": {
                       "name": "Software Engineering SDK <8.4.2",
-                      "product_id": "CSAFPID-51001"
+                      "product_id": "CSAFPID-51001",
+                      "product_identification_helper": {
+                        "purl": "pkg:generic/vendor_name/engineering-sdk?vers=semver%2F%3C8.4.2"
+                      }
                     }
                   }
                 ],
@@ -236,11 +264,14 @@
       {
         "branches": [
           {
-            "category": "product_name",
+            "category": "product_family",
             "name": "Windows",
             "product": {
               "name": "Microsoft Windows",
-              "product_id": "CSAFPID-90001"
+              "product_id": "CSAFPID-90001",
+              "product_identification_helper": {
+                "cpe": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*"
+              }
             }
           }
         ],
@@ -252,35 +283,25 @@
           {
             "branches": [
               {
-                "category": "product_version_range",
-                "name": "3.3.0<3.3.2",
+                "category": "product_version",
+                "name": "3.3.0",
                 "product": {
-                  "name": "OpenSSL 3.3.0<3.3.2",
-                  "product_id": "CSAFPID-51010"
+                  "name": "OpenSSL 3.3.0",
+                  "product_id": "CSAFPID-51010",
+                  "product_identification_helper": {
+                    "purl": "pkg:generic/openssl@3.3.0"
+                  }
                 }
               },
               {
-                "category": "product_version_range",
-                "name": "3.2.0<3.2.3",
+                "category": "product_version",
+                "name": "3.3.1",
                 "product": {
-                  "name": "OpenSSL 3.2.0<3.2.3",
-                  "product_id": "CSAFPID-51011"
-                }
-              },
-              {
-                "category": "product_version_range",
-                "name": "3.1.0<3.1.7",
-                "product": {
-                  "name": "OpenSSL 3.1.0<3.1.7",
-                  "product_id": "CSAFPID-51012"
-                }
-              },
-              {
-                "category": "product_version_range",
-                "name": "3.0.0<3.0.15",
-                "product": {
-                  "name": "OpenSSL 3.0.0<3.0.15",
-                  "product_id": "CSAFPID-51013"
+                  "name": "OpenSSL 3.3.1",
+                  "product_id": "CSAFPID-51011",
+                  "product_identification_helper": {
+                    "purl": "pkg:generic/openssl@3.3.1"
+                  }
                 }
               },
               {
@@ -288,7 +309,10 @@
                 "name": "3.3.2",
                 "product": {
                   "name": "OpenSSL 3.3.2",
-                  "product_id": "CSAFPID-52010"
+                  "product_id": "CSAFPID-52010",
+                  "product_identification_helper": {
+                    "purl": "pkg:generic/openssl@3.3.2"
+                  }
                 }
               },
               {
@@ -296,24 +320,33 @@
                 "name": "3.2.3",
                 "product": {
                   "name": "OpenSSL 3.2.3",
-                  "product_id": "CSAFPID-52011"
+                  "product_id": "CSAFPID-52011",
+                  "product_identification_helper": {
+                    "purl": "pkg:generic/openssl@3.2.3"
+                  }
                 }
               },
               {
-                "category": "product_version",
-                "name": "3.1.7",
                 "product": {
-                  "name": "OpenSSL 3.1.7",
-                  "product_id": "CSAFPID-52012"
-                }
+                  "product_id": "CSAFPID-51020",
+                  "name": "OpenSSL 3.2.0",
+                  "product_identification_helper": {
+                    "purl": "pkg:generic/openssl@3.2.0"
+                  }
+                },
+                "category": "product_version",
+                "name": "3.2.0"
               },
               {
-                "category": "product_version",
-                "name": "3.0.15",
                 "product": {
-                  "name": "OpenSSL 3.0.15",
-                  "product_id": "CSAFPID-52013"
-                }
+                  "product_id": "CSAFPID-51021",
+                  "name": "OpenSSL 3.2.1",
+                  "product_identification_helper": {
+                    "purl": "pkg:generic/openssl@3.2.1"
+                  }
+                },
+                "category": "product_version",
+                "name": "3.2.1"
               }
             ],
             "category": "product_name",
@@ -357,10 +390,28 @@
       {
         "category": "installed_on",
         "full_product_name": {
-          "name": "FW <8.4.2 installed on PRODUCT_NAME_02",
+          "name": "FW <8.4.2 installed on PRODUCT_NAME_01 HW rev a",
           "product_id": "CSAFPID-31002"
         },
+        "product_reference": "CSAFPID-21002",
+        "relates_to_product_reference": "CSAFPID-11001"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "FW <8.4.2 installed on PRODUCT_NAME_02",
+          "product_id": "CSAFPID-31003"
+        },
         "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11002"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "FW <8.4.2 installed on PRODUCT_NAME_02",
+          "product_id": "CSAFPID-31004"
+        },
+        "product_reference": "CSAFPID-21002",
         "relates_to_product_reference": "CSAFPID-11002"
       },
       {
@@ -385,7 +436,7 @@
         "category": "installed_on",
         "full_product_name": {
           "name": "Software Engineering SDK <8.4.2 installed on Microsoft Windows",
-          "product_id": "CSAFPID-31003"
+          "product_id": "CSAFPID-31005"
         },
         "product_reference": "CSAFPID-51001",
         "relates_to_product_reference": "CSAFPID-90001"
@@ -409,7 +460,7 @@
           "audience": "all",
           "category": "description",
           "text": "#{[TODO][MUST]] \nShort vulnerability description like in the CVE}#",
-          "title": "Vulnerability Description"
+          "title": "CVE description"
         },
         {
           "audience": "operational management and system administrators",
@@ -430,6 +481,11 @@
           "CSAFPID-32003"
         ],
         "known_affected": [
+          "CSAFPID-31001",
+          "CSAFPID-31002",
+          "CSAFPID-31003"
+        ],
+        "last_affected": [
           "CSAFPID-31001",
           "CSAFPID-31002",
           "CSAFPID-31003"
