@@ -409,7 +409,7 @@
           "audience": "all",
           "category": "description",
           "text": "#{[TODO][MUST]] \nShort vulnerability description like in the CVE}#",
-          "title": "Vulnerability Description"
+          "title": "CVE Description"
         },
         {
           "audience": "operational management and system administrators",
