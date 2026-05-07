@@ -120,7 +120,7 @@
       ],
       "current_release_date": "${current_release_date=${initial_revision_number}$}#{[TODO][MUST]Must be the date of the newest revision}#",
       "generator": {
-        "date": "2026-04-20T12:43:30.738Z",
+        "date": "2026-05-07T05:37:49.700Z",
         "engine": {
           "name": "Secvisogram",
           "version": "2.5.44"
@@ -228,7 +228,7 @@
                     }
                   }
                 ],
-                "category": "product_name",
+                "category": "product_family",
                 "name": "PRODUCT_FAMILY_FW01"
               }
             ],
