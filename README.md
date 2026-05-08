@@ -118,12 +118,16 @@ The suggestions made here for the IDs are intended to simplify the processing an
 |:------ |:------:| ------:|
 | Hardware | affected | CSAFPID-11xxx |
 | Hardware | fixed | CSAFPID-12xxx |
+| Hardware | not affected | CSAFPID-13xxx |
 | Firmware | affected | CSAFPID-21xxx |
 | Firmware | fixed | CSAFPID-22xxx |
+| Firmware | not affected | CSAFPID-23xxx |
 | Relations | affected | CSAFPID-31xxx |
 | Relations | fixed | CSAFPID-32xxx |
+| Relations | not affected | CSAFPID-33xxx |
 | Software | affected | CSAFPID-51xxx |
 | Software | fixed | CSAFPID-52xxx |
+| Software | not affected | CSAFPID-53xxx |
 | OS | n/a | CSAFPID-90xxx |
 
 
