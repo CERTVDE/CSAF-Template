@@ -20,7 +20,7 @@
       }
     ],
     "aggregate_severity": {
-      "namespace": "${aggr_sev_namespace=}$",
+      "namespace": "${aggr_sev_namespace=https://www.first.org/cvss/v4.0/specification-document#Qualitative-Severity-Rating-Scale}$",
       "text": "#{[TODO][MAY] critical/high...}#"
     },
     "category": "csaf_security_advisory",
@@ -47,6 +47,11 @@
         "category": "description",
         "text": "${note_impact=[TODO][SHOULD]\nImpact content}$",
         "title": "Impact"
+      },
+      {
+        "category": "general",
+        "text": "${note_additional_vulnerabilities=[TODO][MAY]\nPlease note the document references for information about additional vulnerabilities.}$",
+        "title": "Additional Vulnerabilities"
       },
       {
         "category": "description",
@@ -101,6 +106,11 @@
         "category": "self",
         "summary": "#{[MUST]}#${refs_canonical_csaf_summary=%{$.document.tracking.id}%: %{$.document.title}% - CSAF}$",
         "url": "https://${vendorslug}$.csaf-tp.certvde.com/.well-known/csaf/white/${publish_year}$/%{$.document.title}%.json/"
+      },
+      {
+        "category": "external",
+        "summary": "#{[MAY]Release notes containing additional vulnerabilities}#",
+        "url": "#{https://kernel.org/release-notes...}#"
       }
     ],
     "title": "#{[TODO][MUST][VENDOR-CHOICE]}#${document_title=Title (description)}$",
@@ -110,10 +120,10 @@
       ],
       "current_release_date": "${current_release_date=${initial_revision_number}$}#{[TODO][MUST]Must be the date of the newest revision}#",
       "generator": {
-        "date": "2025-11-18T12:18:26.776Z",
+        "date": "2026-05-08T14:20:43.285Z",
         "engine": {
           "name": "Secvisogram",
-          "version": "2.5.38"
+          "version": "2.5.44"
         }
       },
       "id": "#{[TODO][MUST]Document ID is also used for the filename}#${document_id=${vde_id}$}$",
@@ -146,6 +156,7 @@
                           "name": "PRODUCT_NAME_01 HW rev a",
                           "product_id": "CSAFPID-11001",
                           "product_identification_helper": {
+                            "cpe": "cpe:2.3:h:vendor_name:product_name_01:rev_a:*:*:*:*:*:*:*",
                             "model_numbers": [
                               "123-456",
                               "234-567"
@@ -162,7 +173,13 @@
                     "name": "PRODUCT_NAME_02",
                     "product": {
                       "name": "PRODUCT_NAME_02",
-                      "product_id": "CSAFPID-11002"
+                      "product_id": "CSAFPID-11002",
+                      "product_identification_helper": {
+                        "cpe": "cpe:2.3:h:vendor_name:product_name_02:*:*:*:*:*:*:*:*",
+                        "model_numbers": [
+                          "234-568"
+                        ]
+                      }
                     }
                   }
                 ],
@@ -181,20 +198,37 @@
                     "category": "product_version",
                     "name": "8.4.2",
                     "product": {
-                      "name": "Firmware PRODUCT_FAMILY01 8.4.2",
-                      "product_id": "CSAFPID-22001"
+                      "name": "Firmware 8.4.2",
+                      "product_id": "CSAFPID-22001",
+                      "product_identification_helper": {
+                        "cpe": "cpe:2.3:o:vendor_name:product_family_firmware:8.4.2:*:*:*:*:*:*:*"
+                      }
                     }
                   },
                   {
                     "category": "product_version_range",
-                    "name": "<8.4.2",
+                    "name": "vers:semver/>=8.0.0|<8.4.2",
                     "product": {
-                      "name": "Firmware PRODUCT_FAMILY01 <8.4.2",
-                      "product_id": "CSAFPID-21001"
+                      "name": "Firmware 8.0.0<8.4.2",
+                      "product_id": "CSAFPID-21001",
+                      "product_identification_helper": {
+                        "cpe": "cpe:2.3:o:vendor_name:product_family_firmware:8.4.1:*:*:*:*:*:*:*"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:semver/>=1.0.0|<8.0.0",
+                    "product": {
+                      "name": "Firmware <8.0.0",
+                      "product_id": "CSAFPID-23001",
+                      "product_identification_helper": {
+                        "cpe": "cpe:2.3:o:vendor_name:product_family_firmware:8.0.0:*:*:*:*:*:*:*"
+                      }
                     }
                   }
                 ],
-                "category": "product_name",
+                "category": "product_family",
                 "name": "PRODUCT_FAMILY_FW01"
               }
             ],
@@ -206,19 +240,47 @@
               {
                 "branches": [
                   {
+                    "category": "product_version_range",
+                    "name": "vers:semver/>1.0.0|<8.4.3",
+                    "product": {
+                      "name": "Software Engineering SDK <8.4.2",
+                      "product_id": "CSAFPID-51001",
+                      "product_identification_helper": {
+                        "cpe": "cpe:2.3:a:vendor_name:engineering_sdk:*:*:*:*:*:*:*:*"
+                      }
+                    }
+                  },
+                  {
                     "category": "product_version",
                     "name": "8.4.2",
                     "product": {
                       "name": "Software Engineering SDK 8.4.2",
-                      "product_id": "CSAFPID-52001"
+                      "product_id": "CSAFPID-51002",
+                      "product_identification_helper": {
+                        "cpe": "cpe:2.3:a:vendor_name:engineering_sdk:8.4.2:*:*:*:*:*:*:*"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "8.4.3",
+                    "product": {
+                      "name": "Software Engineering SDK 8.4.3",
+                      "product_id": "CSAFPID-52001",
+                      "product_identification_helper": {
+                        "cpe": "cpe:2.3:a:vendor_name:engineering_sdk:8.4.3:*:*:*:*:*:*:*"
+                      }
                     }
                   },
                   {
                     "category": "product_version_range",
-                    "name": "<8.4.2",
+                    "name": "vers:semver/>1.0.0|<8.4.4",
                     "product": {
-                      "name": "Software Engineering SDK <8.4.2",
-                      "product_id": "CSAFPID-51001"
+                      "name": "Software Engineering SDK <8.4.3",
+                      "product_id": "CSAFPID-53001",
+                      "product_identification_helper": {
+                        "cpe": "cpe:2.3:a:vendor_name:engineering_sdk:*:*:*:*:*:*:*:*"
+                      }
                     }
                   }
                 ],
@@ -236,11 +298,14 @@
       {
         "branches": [
           {
-            "category": "product_name",
+            "category": "product_family",
             "name": "Windows",
             "product": {
               "name": "Microsoft Windows",
-              "product_id": "CSAFPID-90001"
+              "product_id": "CSAFPID-90001",
+              "product_identification_helper": {
+                "cpe": "cpe:2.3:o:microsoft:windows:*:*:*:*:*:*:*:*"
+              }
             }
           }
         ],
@@ -253,66 +318,60 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "3.3.0<3.3.2",
+                "name": "vers:semver/>0.0.1|<3.2.0",
                 "product": {
-                  "name": "OpenSSL 3.3.0<3.3.2",
-                  "product_id": "CSAFPID-51010"
+                  "name": "OpenSSL <3.2.0",
+                  "product_id": "CSAFPID-53010",
+                  "product_identification_helper": {
+                    "cpe": "cpe:2.3:a:openssl:openssl:*:*:*:*:*:*:*:*"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "3.2.0",
+                "product": {
+                  "name": "OpenSSL 3.2.0",
+                  "product_id": "CSAFPID-51010",
+                  "product_identification_helper": {
+                    "cpe": "cpe:2.3:a:openssl:openssl:3.2.0:*:*:*:*:*:*:*",
+                    "purl": "pkg:generic/openssl@3.2.0"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "3.2.1",
+                "product": {
+                  "name": "OpenSSL 3.2.1",
+                  "product_id": "CSAFPID-52010",
+                  "product_identification_helper": {
+                    "cpe": "cpe:2.3:a:openssl:openssl:3.2.1:*:*:*:*:*:*:*",
+                    "purl": "pkg:generic/openssl@3.2.1"
+                  }
                 }
               },
               {
                 "category": "product_version_range",
-                "name": "3.2.0<3.2.3",
+                "name": "vers:semver/>=3.3.0|<3.3.5",
                 "product": {
-                  "name": "OpenSSL 3.2.0<3.2.3",
-                  "product_id": "CSAFPID-51011"
-                }
-              },
-              {
-                "category": "product_version_range",
-                "name": "3.1.0<3.1.7",
-                "product": {
-                  "name": "OpenSSL 3.1.0<3.1.7",
-                  "product_id": "CSAFPID-51012"
-                }
-              },
-              {
-                "category": "product_version_range",
-                "name": "3.0.0<3.0.15",
-                "product": {
-                  "name": "OpenSSL 3.0.0<3.0.15",
-                  "product_id": "CSAFPID-51013"
+                  "name": "OpenSSL 3.3.0<3.3.5",
+                  "product_id": "CSAFPID-51011",
+                  "product_identification_helper": {
+                    "cpe": "cpe:2.3:a:openssl:openssl:*:*:*:*:*:*:*:*"
+                  }
                 }
               },
               {
                 "category": "product_version",
-                "name": "3.3.2",
+                "name": "3.3.5",
                 "product": {
-                  "name": "OpenSSL 3.3.2",
-                  "product_id": "CSAFPID-52010"
-                }
-              },
-              {
-                "category": "product_version",
-                "name": "3.2.3",
-                "product": {
-                  "name": "OpenSSL 3.2.3",
-                  "product_id": "CSAFPID-52011"
-                }
-              },
-              {
-                "category": "product_version",
-                "name": "3.1.7",
-                "product": {
-                  "name": "OpenSSL 3.1.7",
-                  "product_id": "CSAFPID-52012"
-                }
-              },
-              {
-                "category": "product_version",
-                "name": "3.0.15",
-                "product": {
-                  "name": "OpenSSL 3.0.15",
-                  "product_id": "CSAFPID-52013"
+                  "name": "OpenSSL 3.3.5",
+                  "product_id": "CSAFPID-52011",
+                  "product_identification_helper": {
+                    "cpe": "cpe:2.3:a:openssl:openssl:3.3.5:*:*:*:*:*:*:*",
+                    "purl": "pkg:generic/openssl@3.3.5"
+                  }
                 }
               }
             ],
@@ -322,6 +381,23 @@
         ],
         "category": "vendor",
         "name": "OpenSSL Software Foundation"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_family",
+            "name": "Linux",
+            "product": {
+              "name": "Linux",
+              "product_id": "CSAFPID-90002",
+              "product_identification_helper": {
+                "cpe": "cpe:2.3:o:linux:linux:*:*:*:*:*:*:*:*"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "The Linux Foundation"
       }
     ],
     "product_groups": [
@@ -329,8 +405,7 @@
         "group_id": "CSAFGID-0001",
         "product_ids": [
           "CSAFPID-31001",
-          "CSAFPID-31002",
-          "CSAFPID-31003"
+          "CSAFPID-31002"
         ],
         "summary": "Affected products."
       },
@@ -338,18 +413,52 @@
         "group_id": "CSAFGID-0002",
         "product_ids": [
           "CSAFPID-32001",
-          "CSAFPID-32002",
-          "CSAFPID-32003"
+          "CSAFPID-32002"
         ],
         "summary": "Fixed products."
+      },
+      {
+        "group_id": "CSAFGID-0003",
+        "product_ids": [
+          "CSAFPID-33001",
+          "CSAFPID-33002"
+        ],
+        "summary": "Products not affected."
       }
     ],
     "relationships": [
       {
         "category": "installed_on",
         "full_product_name": {
-          "name": "FW <8.4.2 installed on PRODUCT_NAME_01 HW rev a",
-          "product_id": "CSAFPID-31001"
+          "name": "Firmware <8.0.0 installed on PRODUCT_NAME_01 HW rev a",
+          "product_id": "CSAFPID-33001",
+          "product_identification_helper": {
+            "cpe": "cpe:2.3:o:vendor_name:product_name_01:rev_a:*:*:*:*:*:*:*"
+          }
+        },
+        "product_reference": "CSAFPID-23001",
+        "relates_to_product_reference": "CSAFPID-11001"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware <8.0.0 installed on PRODUCT_NAME_02",
+          "product_id": "CSAFPID-33002",
+          "product_identification_helper": {
+            "cpe": "cpe:2.3:o:vendor_name:product_name_02:*:*:*:*:*:*:*:*"
+          }
+        },
+        "product_reference": "CSAFPID-23001",
+        "relates_to_product_reference": "CSAFPID-11002"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware 8.0.0<8.4.2 installed on PRODUCT_NAME_01 HW rev a",
+          "product_id": "CSAFPID-31001",
+          "product_identification_helper": {
+            "cpe": "cpe:2.3:o:vendor_name:product_name_01:rev_a:*:*:*:*:*:*:*"
+          }
         },
         "product_reference": "CSAFPID-21001",
         "relates_to_product_reference": "CSAFPID-11001"
@@ -357,8 +466,11 @@
       {
         "category": "installed_on",
         "full_product_name": {
-          "name": "FW <8.4.2 installed on PRODUCT_NAME_02",
-          "product_id": "CSAFPID-31002"
+          "name": "Firmware 8.0.0<8.4.2 installed on PRODUCT_NAME_02",
+          "product_id": "CSAFPID-31002",
+          "product_identification_helper": {
+            "cpe": "cpe:2.3:o:vendor_name:product_name_02:*:*:*:*:*:*:*:*"
+          }
         },
         "product_reference": "CSAFPID-21001",
         "relates_to_product_reference": "CSAFPID-11002"
@@ -366,8 +478,11 @@
       {
         "category": "installed_on",
         "full_product_name": {
-          "name": "FW 8.4.2 installed on PRODUCT_NAME_01 HW rev a",
-          "product_id": "CSAFPID-32001"
+          "name": "Firmware 8.4.2 installed on PRODUCT_NAME_01 HW rev a",
+          "product_id": "CSAFPID-32001",
+          "product_identification_helper": {
+            "cpe": "cpe:2.3:o:vendor_name:product_name_01:rev_a:8.4.2:*:*:*:*:*:*"
+          }
         },
         "product_reference": "CSAFPID-22001",
         "relates_to_product_reference": "CSAFPID-11001"
@@ -375,8 +490,11 @@
       {
         "category": "installed_on",
         "full_product_name": {
-          "name": "FW 8.4.2 installed on PRODUCT_NAME_02",
-          "product_id": "CSAFPID-32002"
+          "name": "Firmware 8.4.2 installed on PRODUCT_NAME_02",
+          "product_id": "CSAFPID-32002",
+          "product_identification_helper": {
+            "cpe": "cpe:2.3:o:vendor_name:product_name_02:8.4.2:*:*:*:*:*:*:*"
+          }
         },
         "product_reference": "CSAFPID-22001",
         "relates_to_product_reference": "CSAFPID-11002"
@@ -384,19 +502,85 @@
       {
         "category": "installed_on",
         "full_product_name": {
-          "name": "Software Engineering SDK <8.4.2 installed on Microsoft Windows",
-          "product_id": "CSAFPID-31003"
+          "name": "Software Engineering SDK <8.4.3 installed on Linux",
+          "product_id": "CSAFPID-33011",
+          "product_identification_helper": {
+            "cpe": "cpe:2.3:a:vendor_name:engineering_sdk:*:*:*:*:*:*:*:*"
+          }
+        },
+        "product_reference": "CSAFPID-53001",
+        "relates_to_product_reference": "CSAFPID-90002"
+      },
+      {
+        "category": "installed_with",
+        "full_product_name": {
+          "name": "Software Engineering SDK <8.4.2 installed with OpenSSL 3.2.0",
+          "product_id": "CSAFPID-51901",
+          "product_identification_helper": {
+            "cpe": "cpe:2.3:a:vendor_name:engineering_sdk:*:*:*:*:*:*:*:*"
+          }
         },
         "product_reference": "CSAFPID-51001",
+        "relates_to_product_reference": "CSAFPID-51010"
+      },
+      {
+        "category": "installed_with",
+        "full_product_name": {
+          "name": "Software Engineering SDK 8.4.2 installed with OpenSSL 3.3.0<3.3.5",
+          "product_id": "CSAFPID-51902",
+          "product_identification_helper": {
+            "cpe": "cpe:2.3:a:vendor_name:engineering_sdk:*:*:*:*:*:*:*:*"
+          }
+        },
+        "product_reference": "CSAFPID-51002",
+        "relates_to_product_reference": "CSAFPID-51011"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Software Engineering SDK <8.4.2 installed with OpenSSL 3.2.0 installed on Microsoft Windows",
+          "product_id": "CSAFPID-51101",
+          "product_identification_helper": {
+            "cpe": "cpe:2.3:a:vendor_name:engineering_sdk:*:*:*:*:*:*:*:*"
+          }
+        },
+        "product_reference": "CSAFPID-51901",
         "relates_to_product_reference": "CSAFPID-90001"
       },
       {
         "category": "installed_on",
         "full_product_name": {
-          "name": "Software Engineering SDK 8.4.2 installed on Microsoft Windows",
-          "product_id": "CSAFPID-32003"
+          "name": "Software Engineering SDK 8.4.2 installed with OpenSSL 3.3.0<3.3.5 installed on Microsoft Windows",
+          "product_id": "CSAFPID-51102",
+          "product_identification_helper": {
+            "cpe": "cpe:2.3:a:vendor_name:engineering_sdk:8.4.2:*:*:*:*:*:*:*"
+          }
+        },
+        "product_reference": "CSAFPID-51902",
+        "relates_to_product_reference": "CSAFPID-90001"
+      },
+      {
+        "category": "installed_with",
+        "full_product_name": {
+          "name": "Software Engineering SDK 8.4.3 installed with OpenSSL 3.3.5",
+          "product_id": "CSAFPID-52901",
+          "product_identification_helper": {
+            "cpe": "cpe:2.3:a:vendor_name:engineering_sdk:8.4.3:*:*:*:*:*:*:*"
+          }
         },
         "product_reference": "CSAFPID-52001",
+        "relates_to_product_reference": "CSAFPID-52011"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Software Engineering SDK 8.4.3 installed with OpenSSL 3.3.5 installed on Microsoft Windows",
+          "product_id": "CSAFPID-52101",
+          "product_identification_helper": {
+            "cpe": "cpe:2.3:a:vendor_name:engineering_sdk:8.4.3:*:*:*:*:*:*:*"
+          }
+        },
+        "product_reference": "CSAFPID-52901",
         "relates_to_product_reference": "CSAFPID-90001"
       }
     ]
@@ -408,8 +592,8 @@
         {
           "audience": "all",
           "category": "description",
-          "text": "#{[TODO][MUST]] \nShort vulnerability description like in the CVE}#",
-          "title": "CVE Description"
+          "text": "#{[TODO][MUST]] \nShort vulnerability description from the CVE record}#",
+          "title": "CVE description"
         },
         {
           "audience": "operational management and system administrators",
@@ -426,13 +610,15 @@
       "product_status": {
         "fixed": [
           "CSAFPID-32001",
-          "CSAFPID-32002",
-          "CSAFPID-32003"
+          "CSAFPID-32002"
         ],
         "known_affected": [
           "CSAFPID-31001",
-          "CSAFPID-31002",
-          "CSAFPID-31003"
+          "CSAFPID-31002"
+        ],
+        "known_not_affected": [
+          "CSAFPID-33001",
+          "CSAFPID-33002"
         ]
       },
       "remediations": [
@@ -442,8 +628,17 @@
           "entitlements": [
             "#{[TODO][MAY][if applicable]\nConditions that must be fulfilled in order to receive the patch or implement the mitigation action.\n\nExample:\n\nAn active support contract is required.}#"
           ],
-          "group_ids": [
-            "CSAFGID-0001"
+          "product_ids": [
+            "CSAFPID-21001",
+            "CSAFPID-31002"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to Firmware 8.4.2",
+          "product_ids": [
+            "CSAFPID-31001",
+            "CSAFPID-31002"
           ]
         }
       ],
@@ -469,8 +664,7 @@
           },
           "products": [
             "CSAFPID-31001",
-            "CSAFPID-31002",
-            "CSAFPID-31003"
+            "CSAFPID-31002"
           ]
         }
       ],
@@ -507,20 +701,31 @@
       ],
       "product_status": {
         "fixed": [
+          "CSAFPID-52101",
           "CSAFPID-52010",
-          "CSAFPID-52011",
-          "CSAFPID-52012",
-          "CSAFPID-52013",
-          "CSAFPID-52001"
+          "CSAFPID-52011"
         ],
         "known_affected": [
+          "CSAFPID-51101",
+          "CSAFPID-51102",
           "CSAFPID-51010",
-          "CSAFPID-51011",
-          "CSAFPID-51012",
-          "CSAFPID-51013",
-          "CSAFPID-51001"
+          "CSAFPID-51011"
+        ],
+        "known_not_affected": [
+          "CSAFPID-33011",
+          "CSAFPID-53010"
         ]
       },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to Software Engineering SDK 8.4.3",
+          "product_ids": [
+            "CSAFPID-51101",
+            "CSAFPID-51102"
+          ]
+        }
+      ],
       "scores": [
         {
           "cvss_v3": {
@@ -543,9 +748,7 @@
           },
           "products": [
             "CSAFPID-51010",
-            "CSAFPID-51011",
-            "CSAFPID-51012",
-            "CSAFPID-51013"
+            "CSAFPID-51011"
           ]
         },
         {
@@ -568,7 +771,8 @@
             "version": "3.1"
           },
           "products": [
-            "CSAFPID-51001"
+            "CSAFPID-51101",
+            "CSAFPID-51102"
           ]
         }
       ],
