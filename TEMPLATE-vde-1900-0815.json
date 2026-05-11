@@ -120,7 +120,7 @@
       ],
       "current_release_date": "${current_release_date=${initial_revision_number}$}#{[TODO][MUST]Must be the date of the newest revision}#",
       "generator": {
-        "date": "2026-05-08T14:20:43.285Z",
+        "date": "2026-05-11T06:38:37.568Z",
         "engine": {
           "name": "Secvisogram",
           "version": "2.5.44"
@@ -679,7 +679,7 @@
       "notes": [
         {
           "category": "summary",
-          "text": "#{[TODO][SHOULD] As of https://secvisogram.github.io/secvisogram-documentation/#notes-2 - Chapter 4.1.1} [...] For a summary of the vulnerability, a note with title Vulnerability summary and category summary should be created.",
+          "text": "#{[TODO][SHOULD] As of https://secvisogram.github.io/secvisogram-documentation/#notes-2 - Chapter 4.1.1} [...] For a summary of the vulnerability, a note with title Vulnerability summary and category summary should be created. As this vulnerability has an external CVE for an external product and an external Score that does not match our products CVSS score you should use this description to clarify the situation.}#",
           "title": "Vulnerability Summary"
         },
         {
@@ -695,7 +695,7 @@
         },
         {
           "category": "description",
-          "text": "#{[TODO][SHOULD] As of https://secvisogram.github.io/secvisogram-documentation/#notes-2 - Chapter 4.1.1} A Note adding a CVE description is recommended. The title of this note should be CVE description and the category should be set as description. [...]",
+          "text": "#{[TODO][MUST] As of https://secvisogram.github.io/secvisogram-documentation/#notes-2 - Chapter 4.1.1} A Note adding a CVE description is recommended. The title of this note should be CVE description and the category should be set as description. [...]",
           "title": "CVE description"
         }
       ],
